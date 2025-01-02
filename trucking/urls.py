@@ -21,6 +21,6 @@ from .views import root_route
 urlpatterns = [
     path('', root_route),
     path('admin/', admin.site.urls),
-    path('contact/', include('contact.urls')),
-    
+    path('', include('contact.urls')),
+    path('', include('quote.urls')),
 ]
