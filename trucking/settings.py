@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-_o9up@1x!%ao(a48n1*$+0xv@r#r40w0%myfc8agj^lq8@a4*0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['8000-danilleh22-jtgtrucking-wa22733plo0.ws.codeinstitute-ide.net']
 
@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'trucking',
 ]
 
 MIDDLEWARE = [
