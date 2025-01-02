@@ -23,11 +23,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-_o9up@1x!%ao(a48n1*$+0xv@r#r40w0%myfc8agj^lq8@a4*0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-danilleh22-jtgtrucking-wa22733plo0.ws.codeinstitute-ide.net']
 
-
+CSRF_TRUSTED_ORIGINS = ['https://8000-danilleh22-jtgtrucking-wa22733plo0.ws.codeinstitute-ide.net']
+CSRF_ALLOWED_ORIGINS = ['https://8000-danilleh22-jtgtrucking-wa22733plo0.ws.codeinstitute-ide.net']
+CORS_ORIGINS_WHITELIST = ['https://8000-danilleh22-jtgtrucking-wa22733plo0.ws.codeinstitute-ide.net']
 # Application definition
 
 INSTALLED_APPS = [
