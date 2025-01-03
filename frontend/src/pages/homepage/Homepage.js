@@ -1,19 +1,9 @@
 import React from "react";
-import {
-    Row,
-    Col,
-    Container,
-    Card,
-    Image,
-    Overlay,
-  } from "react-bootstrap";
-  import trucking3 from "../../assets/trucking3.jpg";
-
-  import { useState, useRef } from 'react';
+import { Row, Col, Container, Button } from "react-bootstrap";
+import trucking3 from "../../assets/trucking3.jpg";
+import styles from "../../styles/Homepage.module.css";
 
 const Homepage = () => {
-  const [show, setShow] = useState(false);
-  const target = useRef(null);
   return (
     <Container fluid="md">
       <Row className="my-4">
@@ -24,43 +14,26 @@ const Homepage = () => {
 
       <Row>
         <Col>
-        <Image src={trucking3} fluid />
-        <Overlay target={target.current} show={show} placement="right">
-        {({
-          placement: _placement,
-          arrowProps: _arrowProps,
-          show: _show,
-          popper: _popper,
-          hasDoneInitialMeasure: _hasDoneInitialMeasure,
-          ...props
-        }) => (
-          <div
-            {...props}
-            style={{
-              position: 'absolute',
-              backgroundColor: 'rgba(255, 100, 100, 0.85)',
-              padding: '2px 10px',
-              color: 'white',
-              borderRadius: 3,
-              ...props.style,
-            }}
-          >
-            Simple tooltip
+          <div className={styles.ImageContainer}>
+            <img src={trucking3} alt="Trucking" className={styles.Image} />
+            <div className={styles.ImageText}>
+              <h4>Company Slogan</h4>
+              <p>Some generic text</p>
+              <Button variant="primary">Learn More</Button>
+            </div>
           </div>
-        )}
-      </Overlay>
-        </Col>
-      </Row>
-     
-      <Row>
-        <Col>
-          <h3>Why us</h3>
         </Col>
       </Row>
 
       <Row>
         <Col>
-        <h3>Request a Quote</h3>
+          <h3>Why Us</h3>
+        </Col>
+      </Row>
+
+      <Row>
+        <Col>
+          <h3>Request a Quote</h3>
         </Col>
       </Row>
     </Container>
