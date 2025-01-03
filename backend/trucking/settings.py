@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['8000-danilleh22-jtgtrucking-wa22733plo0.ws.codeinstitute-ide.net']
 
+CORS_ALLOW_ALL_ORIGINS = True 
 CSRF_TRUSTED_ORIGINS = ['https://8000-danilleh22-jtgtrucking-wa22733plo0.ws.codeinstitute-ide.net']
 CSRF_ALLOWED_ORIGINS = ['https://8000-danilleh22-jtgtrucking-wa22733plo0.ws.codeinstitute-ide.net']
 CORS_ORIGINS_WHITELIST = ['https://8000-danilleh22-jtgtrucking-wa22733plo0.ws.codeinstitute-ide.net']
@@ -47,8 +48,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
     'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -56,6 +57,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+CORS_ALLOW_ALL_ORIGINS = True 
 
 ROOT_URLCONF = 'trucking.urls'
 
