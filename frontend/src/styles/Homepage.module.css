@@ -9,6 +9,13 @@
     height: 400px;
     display: block;
   }
+
+  .Image2 {
+    height: 35vh;
+    width: 25vw;
+    display: block;
+    margin: auto;
+  }
   
 .ImageText {
     position: absolute;
