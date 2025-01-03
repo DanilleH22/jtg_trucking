@@ -1,6 +1,7 @@
 import React from "react";
-import { Row, Col, Container, Button } from "react-bootstrap";
+import { Row, Col, Container, Button, Image } from "react-bootstrap";
 import trucking3 from "../../assets/trucking3.jpg";
+import trucking1 from "../../assets/trucking1.jpg";
 import styles from "../../styles/Homepage.module.css";
 
 const Homepage = () => {
@@ -27,7 +28,14 @@ const Homepage = () => {
 
       <Row>
         <Col>
+        <div>
           <h3>Why Us</h3>
+          <Image src={trucking1} alt="Trucking" className={styles.Image2} roundedCircle />
+          <p>Reason one</p>
+          <p>Reason 2</p>
+          <p>Reason 3</p>
+          <p>REason 4</p>
+        </div>
         </Col>
       </Row>
 
