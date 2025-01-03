@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Container } from "react-bootstrap";
 
 import ContactUs from "./pages/contact/ContactUs";
 import Services from "./pages/services/Services";
@@ -7,6 +8,10 @@ import Homepage from "./pages/homepage/Homepage";
 
 function App() {
   return (
+    <Container fluid="md"
+    className='testing'
+    style={{ width: '100%', overflow: 'hidden'}}
+    >
     <Router>
       <Routes>
         <Route path="/" element={<Homepage />} />
@@ -16,6 +21,7 @@ function App() {
         <Route path="*" element={<h1>Page not found!</h1>} />
       </Routes>
     </Router>
+    </Container>
   );
 }
 
