@@ -26,7 +26,10 @@ from django.core.mail import send_mail
 
 from rest_framework.views import APIView
 
-class RequestQuote(APIView):
+class RequestQuote(CreateAPIView):
+    queryset = Quote.objects.all()
+    serializer_class = QuoteSerializer
+    
     def get(self, request, *args, **kwargs):
         return Response({"message": "Quote endpoint is ready for POST requests."}, status=status.HTTP_200_OK)
 
@@ -39,7 +42,6 @@ class RequestQuote(APIView):
 
     def perform_create(self, serializer):
         quote = serializer.save()
-        # Example: Send an email notification
         send_mail(
             'New Quote Request',
             f'A new quote has been submitted: {quote}',
