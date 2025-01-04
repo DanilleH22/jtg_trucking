@@ -28,9 +28,9 @@ DEBUG = True
 ALLOWED_HOSTS = ['8000-danilleh22-jtgtrucking-wa22733plo0.ws.codeinstitute-ide.net']
 
 CORS_ALLOW_ALL_ORIGINS = True 
-CSRF_TRUSTED_ORIGINS = ['https://8080-danilleh22-jtgtrucking-wa22733plo0.ws.codeinstitute-ide.net/', 'https://8000-danilleh22-jtgtrucking-wa22733plo0.ws.codeinstitute-ide.net']
-CSRF_ALLOWED_ORIGINS = ['https://8080-danilleh22-jtgtrucking-wa22733plo0.ws.codeinstitute-ide.net/', 'https://8000-danilleh22-jtgtrucking-wa22733plo0.ws.codeinstitute-ide.net']
+CORS_ALLOWED_ORIGINS = ['https://8080-danilleh22-jtgtrucking-wa22733plo0.ws.codeinstitute-ide.net/', 'https://8000-danilleh22-jtgtrucking-wa22733plo0.ws.codeinstitute-ide.net']
 CORS_ORIGINS_WHITELIST = ['https://8080-danilleh22-jtgtrucking-wa22733plo0.ws.codeinstitute-ide.net/', 'https://8000-danilleh22-jtgtrucking-wa22733plo0.ws.codeinstitute-ide.net']
+CSRF_TRUSTED_ORIGINS = ['https://8080-danilleh22-jtgtrucking-wa22733plo0.ws.codeinstitute-ide.net', 'https://8000-danilleh22-jtgtrucking-wa22733plo0.ws.codeinstitute-ide.net']
 # Application definition
 
 INSTALLED_APPS = [
