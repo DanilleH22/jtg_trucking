@@ -27,3 +27,22 @@
     z-index: 2; 
   }
   
+.Why1 {
+  float: left;
+  width: 40%;
+}
+
+.Why2 {
+  float: right;
+  width: 40%;
+}
+
+.Why3 {
+  float: right;
+  width: 40%;
+}
+
+.Why4 {
+  float: left;
+  width: 40%;
+}
