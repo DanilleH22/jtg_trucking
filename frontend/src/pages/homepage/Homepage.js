@@ -3,6 +3,7 @@ import { Row, Col, Container, Button, Image } from "react-bootstrap";
 import trucking3 from "../../assets/trucking3.jpg";
 import trucking1 from "../../assets/trucking1.jpg";
 import styles from "../../styles/Homepage.module.css";
+import Card from 'react-bootstrap/Card';
 
 const Homepage = () => {
   return (
@@ -28,14 +29,26 @@ const Homepage = () => {
 
       <Row>
         <Col>
+        <h3>Why Us</h3>
         <div>
-          <h3>Why Us</h3>
+        <Card className={styles.Why1}>
+      <Card.Body >Reason 1</Card.Body>
+    </Card>
+    <Card className={styles.Why2}>
+      <Card.Body >Reason 2</Card.Body>
+    </Card>
           <Image src={trucking1} alt="Trucking" className={styles.Image2} roundedCircle />
-          <p>Reason one</p>
-          <p>Reason 2</p>
-          <p>Reason 3</p>
-          <p>REason 4</p>
+      
+        
+        
+    <Card className={styles.Why3}>
+      <Card.Body >Reason 3</Card.Body>
+    </Card>
+    <Card className={styles.Why4}>
+      <Card.Body >Reason 4</Card.Body>
+    </Card>
         </div>
+        
         </Col>
       </Row>
 
