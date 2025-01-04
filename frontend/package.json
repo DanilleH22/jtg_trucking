@@ -9,7 +9,9 @@
     "django": "^1.0.0",
     "react": "^19.0.0",
     "react-bootstrap": "^2.10.7",
+    "react-day-picker": "^9.5.0",
     "react-dom": "^19.0.0",
+    "react-phone-number-input": "^3.4.10",
     "react-router-dom": "^7.1.1",
     "react-scripts": "^5.0.1",
     "web-vitals": "^4.2.4"
