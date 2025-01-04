@@ -29,13 +29,19 @@ const Homepage = () => {
     additional_services: ""
   });
 
-  const handleDateChange = (date) => {
-    setSelected(date);
-    setRequestQuoteData((prevState) => ({
+  const handleDateChange = (event) => {
+    const selectedDate = new Date(event.target.value); 
+    if (selectedDate instanceof Date && !isNaN(selectedDate)) {
+      setSelected(selectedDate);
+      setRequestQuoteData((prevState) => ({
         ...prevState,
-        preferred_date: date ? date.toISOString().split("T")[0] : "",
-    }));
-};
+        preferred_date: selectedDate.toISOString().split("T")[0],
+      }));
+    } else {
+      console.error("Invalid date selected");
+    }
+  };
+  
 
 const [selected, setSelected] = useState();
   const [value, setValue] = useState()
@@ -93,11 +99,13 @@ const [selected, setSelected] = useState();
       setShowAlert(true);
       resetForm();
     } catch (err) {
-      setErrors(err.response?.data);
-      setAlertMessage("Failed to send message: " + err.response?.data.error);
+      const errorMsg =
+        err.response?.data?.error || "An unexpected error occurred. Please try again.";
+      setAlertMessage(`Failed to send message: ${errorMsg}`);
       setShowAlert(true);
     }
-  } 
+  };
+  
 
 
 
@@ -240,14 +248,18 @@ const [selected, setSelected] = useState();
                   />
                 </div>
 
-                <DayPicker
-    mode="single"
-    selected={selected}
-    onSelect={handleDateChange}
-    footer={
-        selected ? `Selected: ${selected.toLocaleDateString()}` : "Pick a day."
-    }
+                <div className="form-group">
+                  <label htmlFor="preferred_date">Select preferred pick up date:</label>
+                  <input
+  type="date"
+  className="form-control"
+  name="preferred_date"
+  id="preferred_date"
+  value={preferred_date}
+  onChange={handleDateChange}
 />
+<p>Selected Date: {preferred_date}</p>
+                </div>
 
 
                 <div className="form-group">
