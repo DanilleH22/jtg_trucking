@@ -291,11 +291,12 @@ const [selected, setSelected] = useState();
                 <div className="form-group">
                   <label htmlFor="additional_services">Additional services:</label>
                   <textarea
+                  type="text"
                     className="form-control"
                     rows="5"
                     placeholder="Enter your message here"
-                    id="message"
-                    name="message"
+                    id="additional_services"
+                    name="additional_services"
                     value={additional_services}
                     onChange={handleChange}
                   />
