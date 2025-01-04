@@ -1,13 +1,117 @@
-import React from "react";
-import { Row, Col, Container, Button, Image } from "react-bootstrap";
+import React, { useState } from "react";
+import { Row, Col, Container, Button, Image, Alert } from "react-bootstrap";
 import trucking3 from "../../assets/trucking3.jpg";
 import trucking1 from "../../assets/trucking1.jpg";
 import styles from "../../styles/Homepage.module.css";
 import Card from 'react-bootstrap/Card';
+import axios from "axios";
+import { DayPicker } from "react-day-picker";
+import "react-day-picker/style.css";
+import 'react-phone-number-input/style.css'
+import PhoneInput from 'react-phone-number-input'
 
 const Homepage = () => {
+
+/**
+   * Send API request a quote information
+   */
+
+  const [requestQuoteData, setRequestQuoteData] = useState({
+    name: "",
+    company: "",
+    email: "",
+    phone_number: "",
+    pickup_location: "",
+    drop_off_location: "",
+    preferred_date: "",
+    type_of_freight: "",
+    weight_of_freight: "",
+    additional_services: ""
+  });
+
+  const handleDateChange = (date) => {
+    setSelected(date);
+    setRequestQuoteData((prevState) => ({
+        ...prevState,
+        preferred_date: date ? date.toISOString().split("T")[0] : "",
+    }));
+};
+
+const [selected, setSelected] = useState();
+  const [value, setValue] = useState()
+
+  const { name, company, email, phone_number,
+    pickup_location, drop_off_location, preferred_date,
+    type_of_freight, weight_of_freight, additional_services } = requestQuoteData;
+
+  const [setErrors] = useState({});
+  const [alertMessage, setAlertMessage] = useState("");
+  const [showAlert, setShowAlert] = useState(false);
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setRequestQuoteData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
+  const handlePhoneChange = (value) => {
+    setRequestQuoteData((prevState) => ({
+        ...prevState,
+        phone_number: value,
+    }));
+};
+
+
+  /**
+   * Reset form when submitted
+   */
+  const resetForm = () => {
+    setRequestQuoteData({
+    name: "",
+    company: "",
+    email: "",
+    phone_number: "",
+    pickup_location: "",
+    drop_off_location: "",
+    preferred_date: "",
+    type_of_freight: "",
+    weight_of_freight: "",
+    additional_services: ""
+    });
+  };
+
+  /**
+   * Submit form and alert user of it
+   */
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      await axios.post("/quote/", requestQuoteData);
+      setAlertMessage("Message sent successfully!");
+      setShowAlert(true);
+      resetForm();
+    } catch (err) {
+      setErrors(err.response?.data);
+      setAlertMessage("Failed to send message: " + err.response?.data.error);
+      setShowAlert(true);
+    }
+  } 
+
+
+
   return (
     <Container fluid="md">
+      {showAlert && (
+            <Alert
+              variant="success"
+              onClose={() => setShowAlert(false)}
+              dismissible
+            >
+              {alertMessage}
+            </Alert>
+          )}
       <Row className="my-4">
         <Col className="text-center">
           <h1 className="d-flex justify-content-center">JTG TRUCKING</h1>
@@ -54,7 +158,144 @@ const Homepage = () => {
 
       <Row>
         <Col>
-          <h3>Request a Quote</h3>
+        <Card>
+            <Card.Header className="d-flex justify-content-center">
+              Request a Quote
+            </Card.Header>
+            <Card.Body>
+              <form id="request-form" onSubmit={handleSubmit} method="POST">
+                <div className="form-group">
+                  <label htmlFor="name">Name:</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Enter your name here"
+                    name="name"
+                    id="name"
+                    autoComplete="on"
+                    value={name}
+                    onChange={handleChange}
+                  />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="company">Company:</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Enter your company name here"
+                    name="company"
+                    id="company"
+                    value={company}
+                    onChange={handleChange}
+                  />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="email">Email address:</label>
+                  <input
+                    type="email"
+                    className="form-control"
+                    aria-describedby="emailHelp"
+                    placeholder="Enter your email here"
+                    name="email"
+                    id="email"
+                    autoComplete="on"
+                    value={email}
+                    onChange={handleChange}
+                  />
+                </div>
+                <div className="form-group">
+                <label htmlFor="phone_number">Phone number:</label>
+                <PhoneInput
+    className="form-control"
+    placeholder="Enter phone number"
+    name="phone_number"
+    value={phone_number}
+    onChange={handlePhoneChange}
+/>
+
+      </div>
+                <div className="form-group">
+                  <label htmlFor="pickup_location">Pickup location:</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Enter your pickup location here"
+                    name="pickup_location"
+                    id="pickup_location"
+                    value={pickup_location}
+                    onChange={handleChange}
+                  />
+                </div>
+
+                <div className="form-group">
+                  <label htmlFor="drop_off_location">Drop off location:</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Enter your drop off location here"
+                    name="drop_off_location"
+                    id="drop_off_location"
+                    value={drop_off_location}
+                    onChange={handleChange}
+                  />
+                </div>
+
+                <DayPicker
+    mode="single"
+    selected={selected}
+    onSelect={handleDateChange}
+    footer={
+        selected ? `Selected: ${selected.toLocaleDateString()}` : "Pick a day."
+    }
+/>
+
+
+                <div className="form-group">
+                  <label htmlFor="type_of_freight">Type of freight:</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Enter the type of freight here"
+                    name="type_of_freight"
+                    id="type_of_freight"
+                    value={type_of_freight}
+                    onChange={handleChange}
+                  />
+                </div>
+
+                <div className="form-group">
+                  <label htmlFor="weight_of_freight">Weight of freight:</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Enter the weight of freight here"
+                    name="weight_of_freight"
+                    id="weight_of_freight"
+                    value={weight_of_freight}
+                    onChange={handleChange}
+                  />
+                </div>
+                
+                <div className="form-group">
+                  <label htmlFor="additional_services">Additional services:</label>
+                  <textarea
+                    className="form-control"
+                    rows="5"
+                    placeholder="Enter your message here"
+                    id="message"
+                    name="message"
+                    value={additional_services}
+                    onChange={handleChange}
+                  />
+                </div>
+                <div className="d-flex justify-content-center">
+                  <Button type="submit" className="btn btn-danger">
+                    Submit
+                  </Button>
+                </div>
+              </form>
+            </Card.Body>
+          </Card>
         </Col>
       </Row>
     </Container>
