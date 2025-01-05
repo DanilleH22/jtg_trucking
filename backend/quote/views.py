@@ -25,10 +25,12 @@ from django.core.mail import send_mail
 
 
 from rest_framework.views import APIView
+from rest_framework.permissions import AllowAny
 
 class RequestQuote(CreateAPIView):
     queryset = Quote.objects.all()
     serializer_class = QuoteSerializer
+    permission_classes = [AllowAny]
     
     def get(self, request, *args, **kwargs):
         return Response({"message": "Quote endpoint is ready for POST requests."}, status=status.HTTP_200_OK)
