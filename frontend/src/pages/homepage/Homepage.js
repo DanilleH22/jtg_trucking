@@ -4,11 +4,11 @@ import trucking3 from "../../assets/trucking3.jpg";
 import trucking1 from "../../assets/trucking1.jpg";
 import styles from "../../styles/Homepage.module.css";
 import Card from 'react-bootstrap/Card';
-import axios from "axios";
-import { DayPicker } from "react-day-picker";
 import "react-day-picker/style.css";
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
+import { axiosReq } from "../../api/axiosDefaults.js"
+import axios from "axios";
 
 const Homepage = () => {
 
@@ -44,13 +44,11 @@ const Homepage = () => {
   
 
 const [selected, setSelected] = useState();
-  const [value, setValue] = useState()
 
   const { name, company, email, phone_number,
     pickup_location, drop_off_location, preferred_date,
     type_of_freight, weight_of_freight, additional_services } = requestQuoteData;
 
-  const [setErrors] = useState({});
   const [alertMessage, setAlertMessage] = useState("");
   const [showAlert, setShowAlert] = useState(false);
 
@@ -93,8 +91,9 @@ const [selected, setSelected] = useState();
    */
   const handleSubmit = async (event) => {
     event.preventDefault();
+    console.log("Sending data:", requestQuoteData);
     try {
-      await axios.post("/quote/", requestQuoteData);
+      await axios.post("https://8000-danilleh22-jtgtrucking-wa22733plo0.ws.codeinstitute-ide.net/quote/", requestQuoteData);
       setAlertMessage("Message sent successfully!");
       setShowAlert(true);
       resetForm();
