@@ -7,8 +7,8 @@ import Card from 'react-bootstrap/Card';
 import "react-day-picker/style.css";
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
-import { axiosReq } from "../../api/axiosDefaults.js"
-import axios from "axios";
+import axios from "../../api/axiosDefaults.js"
+// import axios from "axios";
 
 const Homepage = () => {
 
@@ -93,7 +93,7 @@ const [selected, setSelected] = useState();
     event.preventDefault();
     console.log("Sending data:", requestQuoteData);
     try {
-      await axios.post("https://8000-danilleh22-jtgtrucking-wa22733plo0.ws.codeinstitute-ide.net/quote/", requestQuoteData);
+      await axios.post("/quote/", requestQuoteData);
       setAlertMessage("Message sent successfully!");
       setShowAlert(true);
       resetForm();
