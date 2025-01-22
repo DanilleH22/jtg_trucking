@@ -32,22 +32,22 @@ class RequestQuote(CreateAPIView):
     serializer_class = QuoteSerializer
     permission_classes = [AllowAny]
     
-    def get(self, request, *args, **kwargs):
-        return Response({"message": "Quote endpoint is ready for POST requests."}, status=status.HTTP_200_OK)
+    # def get(self, request, *args, **kwargs):
+    #     return Response({"message": "Quote endpoint is ready for POST requests."}, status=status.HTTP_200_OK)
 
-    def post(self, request, *args, **kwargs):
-        serializer = QuoteSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    # def post(self, request, *args, **kwargs):
+    #     serializer = QuoteSerializer(data=request.data)
+    #     if serializer.is_valid():
+    #         serializer.save()
+    #         return Response(serializer.data, status=status.HTTP_201_CREATED)
+    #     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-    def perform_create(self, serializer):
-        quote = serializer.save()
-        send_mail(
-            'New Quote Request',
-            f'A new quote has been submitted: {quote}',
-            'from@example.com',
-            ['to@example.com'],
-            fail_silently=False,
-        )
+    # def perform_create(self, serializer):
+    #     quote = serializer.save()
+    #     send_mail(
+    #         'New Quote Request',
+    #         f'A new quote has been submitted: {quote}',
+    #         'from@example.com',
+    #         ['to@example.com'],
+    #         fail_silently=False,
+    #     )
