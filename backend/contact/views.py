@@ -8,6 +8,11 @@ from rest_framework.permissions import AllowAny
 from rest_framework.views import APIView
 
 class ContactUs(APIView):
+    queryset = Contact.objects.all()
+    serializer_class = ContactSerializer
+    permission_classes = [AllowAny]
+
+
     # permission_classes = [AllowAny] 
 
     # def get(self, request, *args, **kwargs):
@@ -25,7 +30,3 @@ class ContactUs(APIView):
     #     Explicitly handle OPTIONS requests if necessary.
     #     """
     #     return Response(status=status.HTTP_200_OK)
-
-    queryset = Contact.objects.all()
-    serializer_class = ContactSerializer
-    permission_classes = [AllowAny]
