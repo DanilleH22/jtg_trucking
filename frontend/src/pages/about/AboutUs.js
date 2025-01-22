@@ -7,7 +7,7 @@ const AboutUs = () => {
     <Container>
         <Row>
             <Col>
-            <h3>About Us</h3>
+            <h3 className="d-flex justify-content-center">About Us</h3>
             </Col>
         </Row>
         <Row>
@@ -29,7 +29,7 @@ const AboutUs = () => {
         <Row>
           <h4>Testimonials</h4>
         <Card style={{ width: '18rem' }} >
-      <Card.Body >
+      <Card.Body className="text-center">
       <i class="fa-regular fa-star"></i>
       <i class="fa-regular fa-star"></i>
       <i class="fa-regular fa-star"></i>
@@ -44,7 +44,7 @@ const AboutUs = () => {
       </Card.Body>
     </Card>
     <Card style={{ width: '18rem' }}>
-      <Card.Body className={styles.Testimony}>
+      <Card.Body className="text-center">
       <i class="fa-regular fa-star"></i>
       <i class="fa-regular fa-star"></i>
       <i class="fa-regular fa-star"></i>
@@ -59,7 +59,7 @@ const AboutUs = () => {
       </Card.Body>
     </Card>
     <Card style={{ width: '18rem' }}>
-      <Card.Body>
+      <Card.Body className="text-center">
       <i class="fa-regular fa-star"></i>
       <i class="fa-regular fa-star"></i>
       <i class="fa-regular fa-star"></i>
