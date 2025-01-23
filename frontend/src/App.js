@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Container } from "react-bootstrap";
-
+import NavBar from "../src/components/NavBar.js";
 import ContactUs from "./pages/contact/ContactUs";
 import Services from "./pages/services/Services";
 import AboutUs from "./pages/about/AboutUs";
@@ -12,7 +12,8 @@ function App() {
     className='testing'
     style={{ width: '100%', overflow: 'hidden'}}
     >
-    <Router>
+      <NavBar />
+ 
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/services" element={<Services />} />
@@ -20,7 +21,7 @@ function App() {
         <Route path="/contact" element={<ContactUs />} />
         <Route path="*" element={<h1>Page not found!</h1>} />
       </Routes>
-    </Router>
+    
     </Container>
   );
 }
