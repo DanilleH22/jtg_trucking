@@ -162,7 +162,7 @@ const [selected, setSelected] = useState();
         
         </Col>
       </Row>
-
+          {/* Request a quote */}
       <Row>
         <Col>
         <Card>
@@ -300,7 +300,7 @@ const [selected, setSelected] = useState();
                     onChange={handleChange}
                   />
                 </div>
-                <div className="d-flex justify-content-center">
+                <div className="d-flex justify-content-center my-2">
                   <Button type="submit" className="btn btn-danger">
                     Submit
                   </Button>
