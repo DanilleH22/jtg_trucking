@@ -133,7 +133,7 @@ const ContactUsForm = () => {
                   />
                 </div>
                 <div className="d-flex justify-content-center">
-                  <Button type="submit" className="btn btn-danger">
+                  <Button type="submit" className="btn btn-danger my-2">
                     Submit
                   </Button>
                 </div>
