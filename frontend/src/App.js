@@ -5,6 +5,7 @@ import ContactUs from "./pages/contact/ContactUs";
 import Services from "./pages/services/Services";
 import AboutUs from "./pages/about/AboutUs";
 import Homepage from "./pages/homepage/Homepage";
+import Footer from "../src/components/Footer.js"
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
     style={{ width: '100%', overflow: 'hidden'}}
     >
       <NavBar />
- 
+      
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/services" element={<Services />} />
@@ -21,7 +22,8 @@ function App() {
         <Route path="/contact" element={<ContactUs />} />
         <Route path="*" element={<h1>Page not found!</h1>} />
       </Routes>
-    
+      <Footer />
+      
     </Container>
   );
 }
