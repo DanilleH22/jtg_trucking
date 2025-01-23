@@ -7,15 +7,16 @@ import { Link } from 'react-router-dom';
 function Footer (){
   return (
     <footer>
-    <Container fluid>
-    <Row className='bg-primary text-white p-4'>
+    <Container fluid className='pt-3'> 
+    <Row className='bg-secondary text-white p-4'>
         <Col className='mx-5'>
         <Stack>
             <Image src={trucking1} rounded width={150} height={150}/>
             <h2>JTG Trucking</h2>
-            <p>Company tagline</p>
+            <p>Reliable Transport Solutions</p>
         </Stack>
         </Col>
+        <Col>
         <Nav className='flex-column fs-5'>
             Useful Links
             <Nav.Link as={Link} to="#" className='text-white'>Home</Nav.Link>
@@ -23,7 +24,6 @@ function Footer (){
             <Nav.Link as={Link} to="/services" className='text-white'>Services</Nav.Link>
             <Nav.Link as={Link} to="/contact" className='text-white'>Contact us</Nav.Link>
         </Nav>
-        <Col>
         </Col>
         <Col>
         <h3>Contact Us</h3>
