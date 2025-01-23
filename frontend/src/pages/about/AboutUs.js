@@ -8,7 +8,7 @@ const AboutUs = () => {
     <Container>
         <Row className='my-2'>
             <Col>
-            <h3 className="d-flex justify-content-center">About Us</h3>
+            <h1 className="d-flex justify-content-center">About Us</h1>
             </Col>
         </Row>
         <Row className='my-2'>
@@ -28,7 +28,7 @@ const AboutUs = () => {
             </Col>
         </Row>
         <Row className='d-flex justify-content-evenly my-3'>
-          <h4 className="text-center">Testimonials</h4>
+          <h2 className="text-center">Testimonials</h2>
         <Card style={{ width: '18rem' }} >
       <Card.Body className="text-center">
       <i class="fa-regular fa-star"></i>
