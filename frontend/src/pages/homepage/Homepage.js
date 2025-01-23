@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Row, Col, Container, Button, Image, Alert } from "react-bootstrap";
+import { Row, Col, Container, Button, Image, Alert, Nav } from "react-bootstrap";
 import trucking3 from "../../assets/trucking3.jpg";
 import trucking1 from "../../assets/trucking1.jpg";
 import styles from "../../styles/Homepage.module.css";
@@ -8,7 +8,7 @@ import "react-day-picker/style.css";
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
 import axios from "../../api/axiosDefaults.js"
-// import axios from "axios";
+import { Link } from 'react-router-dom';
 
 const Homepage = () => {
 
@@ -130,9 +130,10 @@ const [selected, setSelected] = useState();
           <div className={styles.ImageContainer}>
             <img src={trucking3} alt="Trucking" className={styles.Image} />
             <div className={styles.ImageText}>
-              <h4>Company Slogan</h4>
-              <p>Some generic text</p>
-              <Button variant="primary">Learn More</Button>
+              <h4><i>Reliable Transport Solutions</i></h4>
+              <Button variant="secondary"><Nav.Link as={Link} to="/services" className="mx-2">
+              Learn more
+            </Nav.Link></Button>
             </div>
           </div>
         </Col>
@@ -140,7 +141,7 @@ const [selected, setSelected] = useState();
 
       <Row>
         <Col>
-        <h3>Why Us</h3>
+        <h3 className="d-flex justify-content-center my-2">Why Us</h3>
         <div>
         <Card className={styles.Why1}>
       <Card.Body >Reason 1</Card.Body>
@@ -162,8 +163,9 @@ const [selected, setSelected] = useState();
         
         </Col>
       </Row>
+
           {/* Request a quote */}
-      <Row>
+      <Row className="my-2 pt-3">
         <Col>
         <Card>
             <Card.Header className="d-flex justify-content-center">
