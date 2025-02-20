@@ -144,20 +144,24 @@ const [selected, setSelected] = useState();
         <h3 className="d-flex justify-content-center my-2">Why Us</h3>
         <div>
         <Card className={styles.Why1}>
-      <Card.Body >Reason 1</Card.Body>
+          <Card.Title className="d-flex justify-content-center">Reliable & On-Time Deliveries</Card.Title>
+      
     </Card>
     <Card className={styles.Why2}>
-      <Card.Body >Reason 2</Card.Body>
+      <Card.Title className="d-flex justify-content-center">Competitive Pricing with No Hidden Fees</Card.Title>
+      
     </Card>
           <Image src={trucking1} alt="Trucking" className={styles.Image2} roundedCircle />
       
         
         
     <Card className={styles.Why3}>
-      <Card.Body >Reason 3</Card.Body>
+      <Card.Title className="d-flex justify-content-center">Personalized Customer Service</Card.Title>
+
     </Card>
     <Card className={styles.Why4}>
-      <Card.Body >Reason 4</Card.Body>
+      <Card.Title className="d-flex justify-content-center">Safety & Professionalism Guaranteed</Card.Title>
+
     </Card>
         </div>
         
