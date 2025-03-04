@@ -9,6 +9,7 @@ import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
 import axios from "../../api/axiosDefaults.js"
 import { Link } from 'react-router-dom';
+import { motion } from "framer-motion";
 
 const Homepage = () => {
 
@@ -107,7 +108,6 @@ const [selected, setSelected] = useState();
   
 
 
-
   return (
     <Container fluid="md">
       {showAlert && (
@@ -143,29 +143,55 @@ const [selected, setSelected] = useState();
         <Col>
         <h3 className="d-flex justify-content-center my-2">Why Us</h3>
         <div>
+        <motion.div
+  initial={{ x: -50, opacity: 0 }}
+  animate={{ x: 0, opacity: 1 }}
+  transition={{ duration: 1 }}
+>
         <Card className={styles.Why1}>
           <Card.Title className="d-flex justify-content-center">Reliable & On-Time Deliveries</Card.Title>
       
     </Card>
+    </motion.div>
+
+    <motion.div
+  initial={{ x: 50, opacity: 0 }}
+  animate={{ x: 0, opacity: 1 }}
+  transition={{ duration: 1 }}
+>
     <Card className={styles.Why2}>
       <Card.Title className="d-flex justify-content-center">Competitive Pricing with No Hidden Fees</Card.Title>
       
     </Card>
+    </motion.div>
+    
           <Image src={trucking1} alt="Trucking" className={styles.Image2} roundedCircle />
       
         
-        
+          <motion.div
+  initial={{ x: 50, opacity: 0 }}
+  animate={{ x: 0, opacity: 1 }}
+  transition={{ duration: 1 }}
+>     
     <Card className={styles.Why3}>
       <Card.Title className="d-flex justify-content-center">Personalized Customer Service</Card.Title>
 
     </Card>
+    </motion.div>
+
+    <motion.div
+  initial={{ x: -50, opacity: 0 }}
+  animate={{ x: 0, opacity: 1 }}
+  transition={{ duration: 1 }}
+>
     <Card className={styles.Why4}>
       <Card.Title className="d-flex justify-content-center">Safety & Professionalism Guaranteed</Card.Title>
 
     </Card>
+    </motion.div>
         </div>
         
-        </Col>
+        </Col> 
       </Row>
 
           {/* Request a quote */}
