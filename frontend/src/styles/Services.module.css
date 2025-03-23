@@ -4,11 +4,13 @@
     --h: 150px;   /* the height of the image */
   --b: 4px;     /* the border thickness*/
   --g: 14px;    /* the gap */
-  --c: #4ECDC4; /* the color */
+  /* --c: #4ECDC4; the color */
+  --c: #8d9292; /* the color */
   width: var(--s);
   height: var(--h);
   
   outline: calc(var(--s)/2) solid rgba(114, 113, 113, 0.6);
+
   outline-offset: calc(var(--s)/-2);
      cursor: pointer;
      transition: 1s;
