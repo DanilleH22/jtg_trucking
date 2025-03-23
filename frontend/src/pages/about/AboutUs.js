@@ -3,6 +3,7 @@ import { Container, Row, Col, Image, Card } from "react-bootstrap";
 import example1 from "../../assets/example1.jpg";
 import example2 from "../../assets/example2.jpg";
 
+
 const AboutUs = () => {
   return (
     <Container>
@@ -31,60 +32,64 @@ const AboutUs = () => {
           <h2 className="text-center">Testimonials</h2>
         <Card style={{ width: '18rem' }} >
       <Card.Body className="text-center">
-      <i class="fa-regular fa-star"></i>
-      <i class="fa-regular fa-star"></i>
-      <i class="fa-regular fa-star"></i>
-      <i class="fa-regular fa-star"></i>
-      <i class="fa-regular fa-star"></i>
-        <Card.Title>Card Title</Card.Title>
+      <span style={{color: 'Gold'}}>
+      <i class="fa-solid fa-star" ></i>
+      <i class="fa-solid fa-star" ></i>
+      <i class="fa-solid fa-star" ></i>
+      <i class="fa-solid fa-star" ></i>
+      <i class="fa-solid fa-star" ></i>
+      </span>
+        <Card.Title>Amazing!</Card.Title>
         <Card.Text>
-          'Some quick example text to build on the card title and make up the
-          bulk of the card's content.""
+          'The service was great and the owner was very communicative. I would definitely recommend this service.'
         </Card.Text>
         
       </Card.Body>
     </Card>
     <Card style={{ width: '18rem' }}>
       <Card.Body className="text-center">
-      <i class="fa-regular fa-star"></i>
-      <i class="fa-regular fa-star"></i>
-      <i class="fa-regular fa-star"></i>
-      <i class="fa-regular fa-star"></i>
-      <i class="fa-regular fa-star"></i>
-        <Card.Title>Card Title</Card.Title>
+      <span style={{color: 'Gold'}}>
+      <i class="fa-solid fa-star" ></i>
+      <i class="fa-solid fa-star" ></i>
+      <i class="fa-solid fa-star" ></i>
+      <i class="fa-solid fa-star" ></i>
+      <i class="fa-solid fa-star" ></i>
+      </span>
+        <Card.Title>Use them!!</Card.Title>
         <Card.Text>
-          'Some quick example text to build on the card title and make up the
-          bulk of the card's content.""
+          'They are the type of service you're looking for. They are professional and very helpful.'
         </Card.Text>
         
       </Card.Body>
     </Card>
     <Card style={{ width: '18rem' }}>
       <Card.Body className="text-center">
-      <i class="fa-regular fa-star"></i>
-      <i class="fa-regular fa-star"></i>
-      <i class="fa-regular fa-star"></i>
-      <i class="fa-regular fa-star"></i>
-      <i class="fa-regular fa-star"></i>
-        <Card.Title>Card Title</Card.Title>
+      <span style={{color: 'Gold'}}>
+      <i class="fa-solid fa-star" ></i>
+      <i class="fa-solid fa-star" ></i>
+      <i class="fa-solid fa-star" ></i>
+      <i class="fa-solid fa-star" ></i>
+      <i class="fa-solid fa-star" ></i>
+      </span>
+        <Card.Title>Phenomenal</Card.Title>
         <Card.Text>
-          'Some quick example text to build on the card title and make up the
-          bulk of the card's content.""
+          'Brilliant service, as always. Any thing you need they will help you with.'
         </Card.Text>
         
       </Card.Body>
     </Card>
     <Card style={{ width: '18rem' }}>
       <Card.Body className="text-center">
-      <i class="fa-regular fa-star"></i>
-      <i class="fa-regular fa-star"></i>
-      <i class="fa-regular fa-star"></i>
-      <i class="fa-regular fa-star"></i>
-      <i class="fa-regular fa-star"></i>
-        <Card.Title>Card Title</Card.Title>
+      <span style={{color: 'Gold'}}>
+      <i class="fa-solid fa-star" ></i>
+      <i class="fa-solid fa-star" ></i>
+      <i class="fa-solid fa-star" ></i>
+      <i class="fa-solid fa-star" ></i>
+      <i class="fa-solid fa-star" ></i>
+      </span>
+        <Card.Title>Fast!!</Card.Title>
         <Card.Text>
-          'Some quick example text to build on the card title and make up the
-          bulk of the card's content.""
+          'They are organised and quick, exactly what you need in a company.'
         </Card.Text>
         
       </Card.Body>
