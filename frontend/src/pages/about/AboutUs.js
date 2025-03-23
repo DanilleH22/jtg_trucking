@@ -14,7 +14,7 @@ const AboutUs = () => {
         </Row>
         <Row className='my-2'>
             <Col className='d-flex align-items-center justify-content-center'>
-                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                <p>"At JTG Trucking, we are committed to providing dependable, efficient, and high-quality transportation services that help businesses move forward. With a strong foundation built on reliability and professionalism, we have grown into a trusted name in the trucking industry. Our fleet of well-maintained trucks and skilled drivers ensures that every load is delivered safely, securely, and on time, no matter the distance. From local hauls to long-distance freight, we take pride in offering customized logistics solutions that meet the diverse needs of our clients. We understand that transportation is a critical part of any business, and we work tirelessly to ensure seamless deliveries that keep supply chains running smoothly.."</p>
             </Col>
             <Col>
             <Image src={example2} thumbnail />
@@ -25,7 +25,7 @@ const AboutUs = () => {
             <Image src={example1} thumbnail />
             </Col>
             <Col className='d-flex align-items-center justify-content-center'>
-            <p >"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            <p >"Customer satisfaction is at the heart of everything we do at JTG Trucking. We believe in building long-term relationships based on trust, transparency, and exceptional service. Our team is dedicated to providing tailored solutions, competitive pricing, and responsive communication to meet the unique demands of every client. Whether you're a small business looking for local deliveries or a large enterprise needing nationwide freight services, we have the expertise and resources to handle your logistics with care and precision. At JTG Trucking, we don’t just transport goods—we deliver peace of mind, ensuring that your cargo arrives safely and efficiently, every time."</p>
             </Col>
         </Row>
         <Row className='d-flex justify-content-evenly my-3'>
