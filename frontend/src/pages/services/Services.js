@@ -4,6 +4,8 @@ import axios from "../../api/axiosDefaults.js"
 import "react-day-picker/style.css";
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
+import 'react-day-picker/style.css';
+import styles from "../../styles/Services.module.css";
 
 const Services = () => {
 
@@ -108,7 +110,7 @@ const [selected, setSelected] = useState();
             </Alert>
           )}
 
-<Card className="my-3 shadow-sm">
+<Card className="my-3 shadow-sm" id={styles.servicesCard}>
         <Row className="g-0">
           <Col xs={12} md={2}>
           <div className='text-center'>
@@ -117,15 +119,15 @@ const [selected, setSelected] = useState();
           </Col>
           <Col xs={12} md={10}>
             <Card.Body>
-              <Card.Title>Service</Card.Title>
+              <Card.Title>Freight Transportation</Card.Title>
               <Card.Text>
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                "JTG Trucking provides reliable and efficient freight transportation services, ensuring goods are delivered safely and on time. Whether it's full truckload (FTL) or less-than-truckload (LTL) shipping, we have the fleet and logistics expertise to handle various types of cargo, including dry goods, industrial materials, and retail merchandise."
               </Card.Text>
             </Card.Body>
           </Col>
         </Row>
       </Card>
-      <Card className="my-3 shadow-sm">
+      <Card className="my-3 shadow-sm" id={styles.servicesCard}>
         <Row className="g-0">
           <Col xs={12} md={2}>
           <div className='text-center'>
@@ -134,15 +136,15 @@ const [selected, setSelected] = useState();
           </Col>
           <Col xs={12} md={10}>
             <Card.Body>
-              <Card.Title>Service</Card.Title>
+              <Card.Title>Expedited Shipping</Card.Title>
               <Card.Text>
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                "For time-sensitive shipments, we offer expedited shipping services designed to get your freight delivered as quickly as possible. Whether it's urgent medical supplies, perishable goods, or high-priority business shipments, our dedicated team ensures fast transit times and real-time tracking to meet strict deadlines."
               </Card.Text>
             </Card.Body>
           </Col>
         </Row>
       </Card>
-      <Card className="my-3 shadow-sm">
+      <Card className="my-3 shadow-sm" id={styles.servicesCard}>
         <Row className="g-0">
           <Col xs={12} md={2}>
           <div className='text-center'>
@@ -151,15 +153,15 @@ const [selected, setSelected] = useState();
           </Col>
           <Col xs={12} md={10}>
             <Card.Body>
-              <Card.Title>Service</Card.Title>
+              <Card.Title>Warehouse and Distribution</Card.Title>
               <Card.Text>
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                "We provide comprehensive warehousing and distribution solutions, including inventory storage, order fulfillment, and supply chain management. Our strategically located facilities help businesses reduce costs and improve efficiency by ensuring products are stored safely and dispatched on time to retailers, wholesalers, and customers."
               </Card.Text>
             </Card.Body>
           </Col>
         </Row>
       </Card>
-      <Card className="my-3 shadow-sm">
+      <Card className="my-3 shadow-sm" id={styles.servicesCard}>
         <Row className="g-0">
           <Col xs={12} md={2}>
           <div className='text-center'>
@@ -168,15 +170,15 @@ const [selected, setSelected] = useState();
           </Col>
           <Col xs={12} md={10}>
             <Card.Body>
-              <Card.Title>Service</Card.Title>
+              <Card.Title>Specialised Hauling</Card.Title>
               <Card.Text>
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                "Some cargo requires specialized handling, and JTG Trucking is equipped to transport heavy, oversized, or hazardous materials safely. Our specialized hauling services include flatbed trucking for large equipment, temperature-controlled transport for perishable goods, and hazmat-certified carriers for dangerous materials."
               </Card.Text>
             </Card.Body>
           </Col>
         </Row>
       </Card>
-      <Card className="my-3 shadow-sm">
+      <Card className="my-3 shadow-sm" id={styles.servicesCard}>
         <Row className="g-0">
           <Col xs={12} md={2}>
           <div className='text-center'>
@@ -185,15 +187,15 @@ const [selected, setSelected] = useState();
           </Col>
           <Col xs={12} md={10}>
             <Card.Body>
-              <Card.Title>Service</Card.Title>
+              <Card.Title>Last Mile Devlivery</Card.Title>
               <Card.Text>
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                "We help businesses bridge the gap between warehouses and customers with our last-mile delivery services. Whether delivering to retail stores, construction sites, or residential areas, we ensure prompt, secure, and cost-effective final-mile logistics, improving customer satisfaction and delivery efficiency."
               </Card.Text>
             </Card.Body>
           </Col>
         </Row>
       </Card>
-      <Card className="my-3 shadow-sm">
+      <Card className="my-3 shadow-sm" id={styles.servicesCard}>
         <Row className="g-0">
           <Col xs={12} md={2}>
           <div className='text-center'>
@@ -202,9 +204,9 @@ const [selected, setSelected] = useState();
           </Col>
           <Col xs={12} md={10}>
             <Card.Body>
-              <Card.Title>Service</Card.Title>
+              <Card.Title>Cross-Border and International Shipping</Card.Title>
               <Card.Text>
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                "For businesses engaged in international trade, we offer cross-border and international trucking services. We handle customs clearance, documentation, and logistics coordination to facilitate smooth shipping between countries. Our experienced team ensures compliance with regulations while providing seamless transport for goods across borders."
               </Card.Text>
             </Card.Body>
           </Col>
