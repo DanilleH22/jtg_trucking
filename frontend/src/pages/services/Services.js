@@ -235,7 +235,7 @@ function dropForm() {
         I'd like a quote!
       </Button> */}
       
-        <Row>
+        <Row className='d-flex align-items-center justify-content-center text-center pt-3'>
         <Col>
 <form>
         <button onClick={(event) => { event.preventDefault(); dropForm(); }} className={`${styles.btn} ${styles.liquid}`}>Request a quote</button>
