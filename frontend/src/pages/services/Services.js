@@ -238,9 +238,8 @@ function dropForm() {
         <Row>
         <Col>
 <form>
-        <button onClick={(event) => { event.preventDefault(); dropForm(); }}>Request a quote</button>
+        <button onClick={(event) => { event.preventDefault(); dropForm(); }} className={`${styles.btn} ${styles.liquid}`}>Request a quote</button>
       </form>
-
       {showForm && (
           <Form id="request-form" onSubmit={handleSubmit} method="POST" key={showForm}>
           
