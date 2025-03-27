@@ -1,11 +1,15 @@
-import React, { useState } from 'react'
-import { Container, Row, Col, Card, Alert, Button } from "react-bootstrap";
+import { useState } from 'react';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import React from 'react'
+import { Container, Row, Col, Card, Alert } from "react-bootstrap";
 import axios from "../../api/axiosDefaults.js"
 import "react-day-picker/style.css";
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
 import 'react-day-picker/style.css';
 import styles from "../../styles/Services.module.css";
+
 
 const Services = () => {
 
@@ -36,7 +40,7 @@ const Services = () => {
   };
   
 
-const [selected, setSelected] = useState();
+const [ setSelected] = useState();
 
   const { name, company, email, phone_number,
     pickup_location, drop_off_location, preferred_date,
@@ -59,6 +63,16 @@ const [selected, setSelected] = useState();
         phone_number: value,
     }));
 };
+
+
+
+
+
+const [showForm, setShowForm] = useState(false);
+
+function dropForm() {
+  setShowForm(!showForm);
+}
 
 
   /**
@@ -215,14 +229,21 @@ const [selected, setSelected] = useState();
 
       {/* Request a quote  */}
 
-      <Row>
+      {/* <Row>
         <Col>
-        <Card>
-            <Card.Header className="d-flex justify-content-center">
-              Request a Quote
-            </Card.Header>
-            <Card.Body>
-              <form id="request-form" onSubmit={handleSubmit} method="POST">
+        <Button variant="primary" onClick={handleShow}>
+        I'd like a quote!
+      </Button> */}
+      
+        <Row>
+        <Col>
+<form>
+        <button onClick={(event) => { event.preventDefault(); dropForm(); }}>Request a quote</button>
+      </form>
+
+      {showForm && (
+          <Form id="request-form" onSubmit={handleSubmit} method="POST" key={showForm}>
+          
                 <div className="form-group">
                   <label htmlFor="name">Name:</label>
                   <input
@@ -357,9 +378,15 @@ const [selected, setSelected] = useState();
                     Submit
                   </Button>
                 </div>
-              </form>
-            </Card.Body>
-          </Card>
+          
+              
+          </Form>
+      )}
+      
+        
+
+
+     
         </Col>
       </Row>
     </Container>
