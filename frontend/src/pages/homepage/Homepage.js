@@ -12,7 +12,6 @@ import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
 import FlipCard from "../../components/FlippingCards/FlipCard.jsx";
 
-
 const Homepage = () => {
 
 /**
@@ -200,29 +199,136 @@ const [selected, setSelected] = useState();
 
 {/* Why use section */}
 <Row>
+<h3><italic>Why Should I Choose JTG Trucking??</italic></h3>
+</Row>
+<Row>
   <Col>
-  <h3><italic>Why Should I Choose JTG Trucking??</italic></h3>
+  
 <div className="card-container">
       <FlipCard
         frontContent={
           <div>
-            <p>{String.fromCodePoint(0x1F69A)}</p>
+            <p>{String.fromCodePoint(128337)}</p>
             <h6>Fast Delivery</h6>
             <p><i>On-time, always</i></p>
           </div>
         }
         backContent={
           <div>
-            <h4>Our Advantages</h4>
-            <ul>
-              <li>24/7 Support</li>
-              <li>GPS Tracking</li>
-            </ul>
+        
+            <p>Time-sensitive? No problem. </p>
+            <p>Our AI-powered route optimization analyzes traffic, weather, and road closures in real-time to shave hours off delivery windows.</p>
           </div>
         }
       />
           </div> 
 </Col>
+
+<Col>
+<div className="card-container">
+      <FlipCard
+        frontContent={
+          <div>
+            <p>{String.fromCodePoint(128176)}</p>
+            <h6>Competitive Rates</h6>
+            <p><i>Transparent pricing</i></p>
+          </div>
+        }
+        backContent={
+          <div>
+        
+            <p>We cut costs—not corners.</p>
+            <p>Our dynamic pricing model adjusts for fuel surcharges, seasonal demand, and backhaul opportunities, saving clients up to 20%.</p>
+          </div>
+        }
+      />
+          </div> 
+</Col>
+    <Col>
+    <div className="card-container">
+      <FlipCard
+        frontContent={
+          <div>
+            <p>{String.fromCodePoint(128272)}</p>
+            <h6>Secure & Safe</h6>
+            <p><i>Goods insured</i></p>
+          </div>
+        }
+        backContent={
+          <div>
+        
+            <p>Ship worry-free </p>
+            <p>With all-risk insurance covering theft, damage, and Acts of God. Policies start at 0.15per 100 value. Claims processed in 72 hours or less. Your freight’s safety is our legal obligation.</p>
+          </div>
+        }
+      />
+          </div> 
+    </Col>
+</Row>
+
+<Row>
+  <Col>
+<div className="card-container">
+      <FlipCard
+        frontContent={
+          <div>
+            <p>{String.fromCodePoint(128205)}</p>
+            <h6>Nationwide Coverage</h6>
+            <p><i>Covered... anywhere</i></p>
+          </div>
+        }
+        backContent={
+          <div>
+        
+            <p>From Los Angeles to New York </p>
+            <p>Every small town in between—our coast-to-coast network ensures no job is out of reach. We operate 500+ trucks and partner with local carriers for last-mile delivery.</p>
+          </div>
+        }
+      />
+          </div> 
+</Col>
+
+<Col>
+<div className="card-container">
+      <FlipCard
+        frontContent={
+          <div>
+            <p>{String.fromCodePoint(128667)}</p>
+            <h6>Reliable Drivers</h6>
+            <p><i>Count on Us</i></p>
+          </div>
+        }
+        backContent={
+          <div>
+        
+            <p>The backbone of our operations</p>
+            <p>Undergoing rigorous training, including safety certifications, defensive driving courses, and cargo security protocols.</p>
+          </div>
+        }
+      />
+          </div> 
+</Col>
+    <Col>
+    <div className="card-container">
+      <FlipCard
+        frontContent={
+          <div>
+            <p>{String.fromCodePoint(128272)}</p>
+            <h6>Real-Time Tracking</h6>
+            <p><i>Oh there's my stuff</i></p>
+          </div>
+        }
+        backContent={
+          <div>
+        
+            <p>Transparency isn’t just a feature </p>
+            <p>Know exactly where your shipment is, through updates sent to your phone number. Receive automated alerts for delays, temperature changes (for refrigerated loads), or unexpected stops.</p>
+          </div>
+        }
+      />
+          </div> 
+    </Col>
+
 </Row>
 
           {/* Request a quote */}
