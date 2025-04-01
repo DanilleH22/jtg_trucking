@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Row, Col, Container, Button, Image, Alert, Nav } from "react-bootstrap";
 import trucking3 from "../../assets/trucking3.jpg";
 import trucking1 from "../../assets/trucking1.jpg";
@@ -10,6 +10,8 @@ import PhoneInput from 'react-phone-number-input'
 import axios from "../../api/axiosDefaults.js"
 import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
+import FlipCard from "../../components/FlippingCards/FlipCard.jsx";
+
 
 const Homepage = () => {
 
@@ -105,7 +107,6 @@ const [selected, setSelected] = useState();
       setShowAlert(true);
     }
   };
-  
 
 
   return (
@@ -193,6 +194,36 @@ const [selected, setSelected] = useState();
         
         </Col> 
       </Row>
+
+
+
+
+{/* Why use section */}
+<Row>
+  <Col>
+  <h3><italic>Why Should I Choose JTG Trucking??</italic></h3>
+<div className="card-container">
+      <FlipCard
+        frontContent={
+          <div>
+            <p>{String.fromCodePoint(0x1F69A)}</p>
+            <h6>Fast Delivery</h6>
+            <p><i>On-time, always</i></p>
+          </div>
+        }
+        backContent={
+          <div>
+            <h4>Our Advantages</h4>
+            <ul>
+              <li>24/7 Support</li>
+              <li>GPS Tracking</li>
+            </ul>
+          </div>
+        }
+      />
+          </div> 
+</Col>
+</Row>
 
           {/* Request a quote */}
       <Row className="my-2 pt-3">
